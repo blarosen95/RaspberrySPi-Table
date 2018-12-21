@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.1">
+
+  <CommandSet xml:lang="en-us" Name="SPiTableCommandSet_en-us">
+
+    <CommandPrefix> Coffee Table, </CommandPrefix>
+    <Example>Play American Dad Hulu</Example>
+
+    <Command Name="PlayHulu">
+      <Example>Play American Dad Hulu</Example>
+      <ListenFor> [Play] {showName} [Hulu] </ListenFor>
+      <Feedback> Playing {showName} on Hulu </Feedback>
+      <Navigate/>
+    </Command>
+
+    <PhraseList Label="showName">
+      <Item> American Dad </Item>
+    </PhraseList>
+
+    <PhraseTopic Label="newShow" Scenario="Search">
+      <Subject>Name</Subject>
+    </PhraseTopic>
+
+  </CommandSet>
+
+</VoiceCommands>
